@@ -142,10 +142,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
   margin-bottom: 113px;
 }
 .calculation .calculation-title {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 124.5%;
-  text-transform: uppercase;
   margin-bottom: 59px;
 }
 .calculation .calculation-form {
@@ -180,16 +176,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
   line-height: 126%;
   border-radius: 10px;
   background: #FFF;
-  transition: 1.5s;
+  transition: 0.3s;
 }
 .calculation .calculation-column .input-box input::placeholder {
   color: #CBCBCB;
-}
-.calculation .calculation-column .input-box input:active {
-  background-color: #000;
-}
-.calculation .calculation-column .input-box input:focus-visible {
-  outline: 1px solid orange;
 }
 .calculation .calculation-column .input-box [for=fileInput] {
   padding: 11px 20px;
@@ -235,6 +225,56 @@ Use it to make something cool, have fun, and share what you've learned with othe
   max-height: 888px;
   width: 100%;
   height: auto;
+}
+
+.advantages {
+  margin-bottom: 97px;
+  padding: 90px 40px 63px;
+  position: relative;
+}
+.advantages::before {
+  content: "";
+  position: absolute;
+  left: 42px;
+  right: 42px;
+  top: 0;
+  height: 100%;
+  border-radius: 20px;
+  background: #363A4D;
+  z-index: -1;
+}
+.advantages .tamplate-title {
+  text-align: center;
+  margin-bottom: 51px;
+  padding-bottom: 13px;
+}
+.advantages .tamplate-title::after {
+  background-color: #E58D35;
+}
+.advantages .advantage {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.advantages .advantage .image-box {
+  width: 113px;
+  height: 113px;
+  border: 1px solid #6C7188;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 0 auto 22px;
+}
+.advantages .advantage .image-box img {
+  border-radius: 50%;
+  background-color: #89C249;
+  width: 100%;
+  height: auto;
+  object-fit: scale-down;
+}
+.advantages .advantage .advantages-description {
+  font-size: 18px;
+  line-height: 124.5%;
+  max-width: 165px;
+  margin: 0 auto;
 }
 
 footer {
@@ -495,6 +535,9 @@ footer {
     font-size: 16px;
     max-width: 275px;
   }
+  .calculation {
+    margin-bottom: 60px;
+  }
   .calculation .tamplate-title {
     margin-bottom: 56px;
   }
@@ -508,20 +551,38 @@ footer {
   .calculation .calculation-decoration {
     display: none;
   }
+  .advantages {
+    padding: 55px 0 68px;
+  }
+  .advantages::before {
+    left: 0;
+    right: 0;
+    border-radius: 0px;
+  }
+  .advantages .tamplate-title {
+    margin-bottom: 44px;
+    padding-bottom: 16px;
+  }
+  .advantages .tamplate-title h2 {
+    font-size: 24px;
+  }
+  .advantages .slick-dots {
+    bottom: -8px;
+  }
 }
 @media screen and (max-width: 767px) {
   .calculation .calculation-title {
     margin-bottom: 82px;
   }
   .calculation .calculation-form {
-    padding: 50px 15px;
+    padding: 50px 15px 22px;
     max-width: 335px;
   }
   .calculation .calculation-row {
     flex-direction: column;
   }
   .calculation .calculation-row .calculation-column__margin {
-    margin-top: -8px;
+    margin-bottom: -8px;
   }
   .calculation .calculation-row .has-checkbox {
     padding-top: 3px;
@@ -670,6 +731,15 @@ input:focus-visible {
   outline: none;
 }
 
+input:hover {
+  box-shadow: 0 0 4px 2px orange;
+}
+
+input:focus-visible,
+input:focus {
+  box-shadow: 0 0 4px 2px #89C249;
+}
+
 [type=checkbox],
 [type=radio] {
   display: none;
@@ -720,6 +790,12 @@ label:hover::before {
 
 .tamplate-title {
   position: relative;
+}
+.tamplate-title h2 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 124.5%;
+  text-transform: uppercase;
 }
 .tamplate-title::after {
   content: "";
