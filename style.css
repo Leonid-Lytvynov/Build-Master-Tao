@@ -117,19 +117,15 @@ Use it to make something cool, have fun, and share what you've learned with othe
   width: 100%;
   max-width: 293px;
 }
-
-.slick-dots {
-  position: absolute;
-  left: 50%;
+.first-screen-slider .slick-dots {
   bottom: 43px;
-  transform: translate(-50%, 0);
 }
 
 .first-screen-nav {
   max-width: 1570px;
 }
 .first-screen-nav .slick-arrow {
-  background-image: url(assets/img/icon-slick-arrow.svg);
+  background-image: url(assets/img/icon-first-screen-arrow.svg);
 }
 .first-screen-nav .slick-prev:hover {
   background-image: url(assets/img/icon-slick-arrow-hover.svg);
@@ -144,33 +140,36 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .calculation .calculation-title {
   margin-bottom: 59px;
 }
-.calculation .calculation-form {
+
+.calculation-form {
   padding: 50px 35px;
   background-color: #363A4D;
   width: 100%;
   max-width: 626px;
   border-radius: 20px;
 }
-.calculation .calculation-row {
+
+.calculation-row {
   display: flex;
 }
-.calculation .calculation-column {
+
+.calculation-column {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-.calculation .calculation-column .input-box {
+.calculation-column .input-box {
   display: flex;
   flex-direction: column;
   margin: 0 15px 20px;
 }
-.calculation .calculation-column .input-box label {
+.calculation-column .input-box label {
   font-size: 15px;
   font-weight: 600;
   line-height: 126%;
   margin-bottom: 6px;
 }
-.calculation .calculation-column .input-box input {
+.calculation-column .input-box input {
   padding: 19px 20px;
   font-size: 15px;
   line-height: 126%;
@@ -178,10 +177,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
   background: #FFF;
   transition: 0.3s;
 }
-.calculation .calculation-column .input-box input::placeholder {
+.calculation-column .input-box input::placeholder {
   color: #CBCBCB;
 }
-.calculation .calculation-column .input-box [for=fileInput] {
+.calculation-column .input-box [for=fileInput] {
   padding: 11px 20px;
   font-weight: 400;
   background-color: transparent;
@@ -192,35 +191,37 @@ Use it to make something cool, have fun, and share what you've learned with othe
   cursor: pointer;
   transition: 0.3s;
 }
-.calculation .calculation-column .input-box [for=fileInput]:hover {
+.calculation-column .input-box [for=fileInput]:hover {
   border: 1px dashed #89C249;
   color: #89C249;
 }
-.calculation .calculation-column .input-box [type=file] {
+.calculation-column .input-box [type=file] {
   display: none;
 }
-.calculation .calculation-column .has-checkbox {
+.calculation-column .has-checkbox {
   padding-top: 19px;
   margin-bottom: 8px;
 }
-.calculation .calculation-column .file-name p {
+.calculation-column .file-name p {
   padding: 0 15px;
   font-size: 15px;
   line-height: 126%;
   margin-top: 6px;
   margin-bottom: 14px;
 }
-.calculation .calculation-btn {
+
+.calculation-btn {
   padding: 20px 36px 20px 33px;
   margin-left: 15px;
   margin-bottom: 11px;
 }
-.calculation .calculation-decoration {
+
+.calculation-decoration {
   position: absolute;
   bottom: -113px;
   right: 0;
 }
-.calculation .calculation-decoration img {
+.calculation-decoration img {
   max-width: 560px;
   max-height: 888px;
   width: 100%;
@@ -251,11 +252,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .advantages .tamplate-title::after {
   background-color: #E58D35;
 }
-.advantages .advantage {
+
+.advantage {
   text-align: center;
   margin-bottom: 48px;
 }
-.advantages .advantage .image-box {
+.advantage .image-box {
   width: 113px;
   height: 113px;
   border: 1px solid #6C7188;
@@ -263,18 +265,105 @@ Use it to make something cool, have fun, and share what you've learned with othe
   padding: 10px;
   margin: 0 auto 22px;
 }
-.advantages .advantage .image-box img {
+.advantage .image-box img {
   border-radius: 50%;
   background-color: #89C249;
   width: 100%;
   height: auto;
   object-fit: scale-down;
 }
-.advantages .advantage .advantages-description {
+.advantage .advantages-description {
   font-size: 18px;
   line-height: 124.5%;
   max-width: 165px;
   margin: 0 auto;
+}
+
+.delivery {
+  position: relative;
+  margin-bottom: 95px;
+}
+.delivery .delivery-slider {
+  position: relative;
+}
+.delivery .tamplate-title {
+  text-align: center;
+  padding-bottom: 13px;
+  margin-bottom: 49px;
+}
+.delivery .tamplate-title::after {
+  background-color: #89C249;
+}
+.delivery .delivery-nav {
+  max-width: 1370px;
+  top: calc(50% + 57px);
+}
+
+.slide-card {
+  padding: 0 20px 27px;
+  border-radius: 20px;
+  background-color: #363A4D;
+  box-shadow: 5px 15px 40px 0px rgba(30, 35, 66, 0.15);
+  max-width: 360px;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+.slide-card .img-box img {
+  object-fit: cover;
+  width: calc(100% + 40px);
+  height: 229px;
+  margin: 0 -20px 27px;
+}
+.slide-card .card-title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 124.5%;
+  margin-bottom: 11px;
+}
+.slide-card .card-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  margin: 0 auto 3px;
+}
+.slide-card .card-options .option-item {
+  padding: 0 6px;
+}
+.slide-card .card-options img {
+  width: 22px;
+  height: 22px;
+  margin-right: 5px;
+  display: inline-block;
+}
+.slide-card .card-options h5 {
+  font-size: 16px;
+  display: inline-block;
+  line-height: 124.5%;
+}
+.slide-card .card-price {
+  margin-bottom: 20px;
+}
+.slide-card .card-price span:first-child {
+  color: #A3A3A3;
+}
+.slide-card .card-price span {
+  font-size: 22px;
+  line-height: 124.5%;
+}
+.slide-card .card-price b {
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 124.5%;
+}
+.slide-card .card-btn-row {
+  display: flex;
+  justify-content: space-between;
+}
+.slide-card .card-btn-row .card-btn {
+  font-size: 15px;
+  padding: 13px 18px;
 }
 
 footer {
@@ -396,9 +485,17 @@ footer {
   transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
+@media screen and (min-width: 768px) {
+  .card-price span:first-child {
+    padding-left: 4px;
+  }
+}
 @media (min-width: 992px) {
   .first-screen-slider .slick-slider {
     padding: 0 92px;
+  }
+  .slide-card {
+    margin: 0 15px;
   }
 }
 @media (min-width: 1200px) {
@@ -416,6 +513,20 @@ footer {
     height: 2px;
     background-color: #89C249;
     margin: 10px 20px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .delivery .slick-list {
+    margin: 0 -15px;
+  }
+}
+@media screen and (max-width: 1399px) {
+  .delivery .delivery-slider {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .delivery .delivery-nav {
+    max-width: 960px;
   }
 }
 @media screen and (max-width: 1199px) {
@@ -464,7 +575,6 @@ footer {
     background-color: #89C249;
   }
   .calculation .tamplate-title .calculation-title {
-    font-size: 36px;
     text-align: center;
     max-width: 440px;
     margin: 0 auto;
@@ -535,14 +645,16 @@ footer {
     font-size: 16px;
     max-width: 275px;
   }
+  .container .tamplate-title h2 {
+    font-size: 24px;
+  }
   .calculation {
     margin-bottom: 60px;
   }
   .calculation .tamplate-title {
-    margin-bottom: 56px;
+    margin-bottom: 55px;
   }
   .calculation .tamplate-title .calculation-title {
-    font-size: 24px;
     max-width: 390px;
   }
   .calculation .calculation-form {
@@ -553,6 +665,7 @@ footer {
   }
   .advantages {
     padding: 55px 0 68px;
+    margin-bottom: 53px;
   }
   .advantages::before {
     left: 0;
@@ -560,14 +673,24 @@ footer {
     border-radius: 0px;
   }
   .advantages .tamplate-title {
-    margin-bottom: 44px;
+    margin-bottom: 46px;
     padding-bottom: 16px;
-  }
-  .advantages .tamplate-title h2 {
-    font-size: 24px;
   }
   .advantages .slick-dots {
     bottom: -8px;
+  }
+  .delivery .delivery-slider {
+    max-width: 390px;
+  }
+  .delivery .slick-list {
+    margin-left: 15px;
+  }
+  .delivery .tamplate-title {
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+  }
+  .delivery .delivery-nav {
+    max-width: 570px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -593,6 +716,41 @@ footer {
   }
   .calculation .btn .icon {
     margin-left: auto;
+  }
+  .delivery .delivery-slider {
+    max-width: 365px;
+  }
+  .delivery .slick-dots {
+    bottom: -40px;
+  }
+  .slide-card {
+    max-width: 335px;
+    padding: 0 23px 26px;
+    margin: 0px;
+  }
+  .slide-card .img-box img {
+    width: calc(100% + 46px);
+    margin: 0 -23px 27px;
+  }
+  .slide-card .card-title {
+    margin-bottom: 10px;
+  }
+  .slide-card .card-options {
+    margin-bottom: 6px;
+  }
+  .slide-card .card-price {
+    margin-bottom: 19px;
+  }
+  .slide-card .card-btn-row .card-btn {
+    padding: 13px 10px;
+  }
+  .slide-card .card-btn-row .transparent-btn {
+    padding: 13px 26px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .delivery .slick-list {
+    margin-left: 5px;
   }
 }
 * {
@@ -628,6 +786,18 @@ body {
   border-color: #89C249;
 }
 
+.transparent-btn {
+  padding: 13px 33px;
+  background-color: transparent;
+  border-radius: 90px;
+  border: 1px solid #E58D35;
+  font-size: 15px;
+}
+.transparent-btn:hover {
+  color: #89C249;
+  border-color: #89C249;
+}
+
 .btn-check:checked + .btn,
 .btn.active,
 .btn.show,
@@ -642,6 +812,7 @@ body {
   align-items: center;
   border-radius: 90px;
   color: #fff;
+  font-size: 16px;
   font-weight: 600;
   line-height: 146%;
   cursor: pointer;
@@ -666,6 +837,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 .slick-dots li {
   list-style-type: none;
@@ -717,6 +891,18 @@ body {
 
 .slick-next:hover {
   transform: rotate(180deg);
+}
+
+.slick-arrow {
+  background-image: url(assets/img/icon-slick-arrow.svg);
+}
+
+.slick-prev:hover {
+  background-image: url(assets/img/icon-slick-arrow-hover.svg);
+}
+
+.slick-next:hover {
+  background-image: url(assets/img/icon-slick-arrow-hover.svg);
 }
 
 label {
