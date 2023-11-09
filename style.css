@@ -137,8 +137,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .calculation {
   margin-bottom: 113px;
 }
-.calculation .calculation-title {
+.calculation .tamplate-title {
   margin-bottom: 59px;
+  text-align: left;
 }
 
 .calculation-form {
@@ -233,19 +234,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   padding: 90px 40px 63px;
   position: relative;
 }
-.advantages::before {
-  content: "";
-  position: absolute;
-  left: 42px;
-  right: 42px;
-  top: 0;
-  height: 100%;
-  border-radius: 20px;
-  background: #363A4D;
-  z-index: -1;
-}
 .advantages .tamplate-title {
-  text-align: center;
   margin-bottom: 51px;
   padding-bottom: 13px;
 }
@@ -281,13 +270,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .delivery {
   position: relative;
-  margin-bottom: 95px;
-}
-.delivery .delivery-slider {
-  position: relative;
+  margin-bottom: 101px;
 }
 .delivery .tamplate-title {
-  text-align: center;
   padding-bottom: 13px;
   margin-bottom: 49px;
 }
@@ -295,75 +280,115 @@ Use it to make something cool, have fun, and share what you've learned with othe
   background-color: #89C249;
 }
 .delivery .delivery-nav {
-  max-width: 1370px;
   top: calc(50% + 57px);
 }
 
-.slide-card {
+.delivery-card {
   padding: 0 20px 27px;
-  border-radius: 20px;
   background-color: #363A4D;
   box-shadow: 5px 15px 40px 0px rgba(30, 35, 66, 0.15);
-  max-width: 360px;
-  width: 100%;
-  overflow: hidden;
   text-align: center;
 }
-.slide-card .img-box img {
+.delivery-card .img-box img {
   object-fit: cover;
   width: calc(100% + 40px);
   height: 229px;
   margin: 0 -20px 27px;
 }
-.slide-card .card-title {
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 124.5%;
-  margin-bottom: 11px;
-}
-.slide-card .card-options {
+.delivery-card .card-options {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 17px;
   margin: 0 auto 3px;
 }
-.slide-card .card-options .option-item {
+.delivery-card .card-options .option-item {
   padding: 0 6px;
 }
-.slide-card .card-options img {
+.delivery-card .card-options img {
   width: 22px;
   height: 22px;
   margin-right: 5px;
   display: inline-block;
 }
-.slide-card .card-options h5 {
+.delivery-card .card-options h5 {
   font-size: 16px;
   display: inline-block;
   line-height: 124.5%;
 }
-.slide-card .card-price {
+.delivery-card .card-price {
   margin-bottom: 20px;
 }
-.slide-card .card-price span:first-child {
+.delivery-card .card-price span:first-child {
   color: #A3A3A3;
 }
-.slide-card .card-price span {
+.delivery-card .card-price span {
   font-size: 22px;
   line-height: 124.5%;
 }
-.slide-card .card-price b {
+.delivery-card .card-price b {
   font-size: 45px;
   font-weight: 700;
   line-height: 124.5%;
 }
-.slide-card .card-btn-row {
+.delivery-card .card-btn-row {
   display: flex;
   justify-content: space-between;
 }
-.slide-card .card-btn-row .card-btn {
+.delivery-card .card-btn-row .card-btn {
   font-size: 15px;
   padding: 13px 18px;
+}
+
+.service {
+  position: relative;
+  padding: 90px 50px 100px;
+}
+.service .tamplate-title {
+  margin-bottom: 56px;
+  padding-bottom: 12px;
+}
+.service .tamplate-title::after {
+  background-color: #E58D35;
+}
+.service .service-nav {
+  top: calc(50% + 55px);
+}
+
+.service-card {
+  padding: 0px 30px 32px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 482px;
+  position: relative;
+}
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(4, 5, 17, 0.91) 0%, rgba(88, 88, 88, 0) 100%);
+  z-index: 1;
+}
+.service-card .card-title {
+  margin-bottom: 12px;
+  z-index: 1;
+}
+.service-card .service-description {
+  font-size: 15px;
+  line-height: 124.5%;
+  margin-bottom: 16px;
+  z-index: 1;
+}
+.service-card .transparent-btn {
+  max-width: 153px;
+  z-index: 1;
 }
 
 footer {
@@ -506,7 +531,7 @@ footer {
     padding-top: 165px;
     padding-bottom: 228px;
   }
-  .calculation .calculation-title::after {
+  .calculation .tamplate-title h2::after {
     content: "";
     display: inline-block;
     width: 85px;
@@ -516,17 +541,17 @@ footer {
   }
 }
 @media screen and (min-width: 1400px) {
-  .delivery .slick-list {
+  .slider .slick-list {
     margin: 0 -15px;
   }
 }
 @media screen and (max-width: 1399px) {
-  .delivery .delivery-slider {
+  section .arrow-nav {
+    max-width: 960px;
+  }
+  .slider {
     max-width: 780px;
     margin: 0 auto;
-  }
-  .delivery .delivery-nav {
-    max-width: 960px;
   }
 }
 @media screen and (max-width: 1199px) {
@@ -570,14 +595,14 @@ footer {
   .calculation .tamplate-title {
     margin: 0 auto 36px;
     padding-bottom: 26px;
+    text-align: center;
+  }
+  .calculation .tamplate-title h2 {
+    max-width: 440px;
+    margin: 0 auto;
   }
   .calculation .tamplate-title::after {
     background-color: #89C249;
-  }
-  .calculation .tamplate-title .calculation-title {
-    text-align: center;
-    max-width: 440px;
-    margin: 0 auto;
   }
   .calculation .calculation-decoration {
     max-width: 38vw;
@@ -654,7 +679,7 @@ footer {
   .calculation .tamplate-title {
     margin-bottom: 55px;
   }
-  .calculation .tamplate-title .calculation-title {
+  .calculation .tamplate-title h2 {
     max-width: 390px;
   }
   .calculation .calculation-form {
@@ -663,14 +688,14 @@ footer {
   .calculation .calculation-decoration {
     display: none;
   }
-  .advantages {
-    padding: 55px 0 68px;
-    margin-bottom: 53px;
-  }
-  .advantages::before {
+  body .section-bg::before {
     left: 0;
     right: 0;
     border-radius: 0px;
+  }
+  .advantages {
+    padding: 55px 0 68px;
+    margin-bottom: 53px;
   }
   .advantages .tamplate-title {
     margin-bottom: 46px;
@@ -679,18 +704,32 @@ footer {
   .advantages .slick-dots {
     bottom: -8px;
   }
-  .delivery .delivery-slider {
-    max-width: 390px;
-  }
-  .delivery .slick-list {
-    margin-left: 15px;
-  }
   .delivery .tamplate-title {
     margin-bottom: 32px;
     padding-bottom: 16px;
   }
-  .delivery .delivery-nav {
+  .slider {
+    max-width: 390px;
+  }
+  .slider .slide-card {
+    margin: 0 auto;
+  }
+  section .arrow-nav {
     max-width: 570px;
+  }
+  .service {
+    padding: 54px 0 100px;
+  }
+  .service .tamplate-title {
+    margin-bottom: 36px;
+    padding-bottom: 16px;
+  }
+  .service .slick-dots {
+    bottom: -41px;
+  }
+  .service-card .service-description {
+    margin-bottom: 7px;
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -723,34 +762,30 @@ footer {
   .delivery .slick-dots {
     bottom: -40px;
   }
-  .slide-card {
+  .slider .slide-card {
     max-width: 335px;
-    padding: 0 23px 26px;
-    margin: 0px;
   }
-  .slide-card .img-box img {
+  .slider .slide-card .card-title {
+    margin-bottom: 10px;
+  }
+  .delivery-card {
+    padding: 0 23px 26px;
+  }
+  .delivery-card .img-box img {
     width: calc(100% + 46px);
     margin: 0 -23px 27px;
   }
-  .slide-card .card-title {
-    margin-bottom: 10px;
-  }
-  .slide-card .card-options {
+  .delivery-card .card-options {
     margin-bottom: 6px;
   }
-  .slide-card .card-price {
+  .delivery-card .card-price {
     margin-bottom: 19px;
   }
-  .slide-card .card-btn-row .card-btn {
+  .delivery-card .card-btn-row .card-btn {
     padding: 13px 10px;
   }
-  .slide-card .card-btn-row .transparent-btn {
+  .delivery-card .card-btn-row .transparent-btn {
     padding: 13px 26px;
-  }
-}
-@media screen and (max-width: 575px) {
-  .delivery .slick-list {
-    margin-left: 5px;
   }
 }
 * {
@@ -905,6 +940,10 @@ body {
   background-image: url(assets/img/icon-slick-arrow-hover.svg);
 }
 
+.arrow-nav {
+  max-width: 1370px;
+}
+
 label {
   cursor: pointer;
 }
@@ -976,6 +1015,7 @@ label:hover::before {
 
 .tamplate-title {
   position: relative;
+  text-align: center;
 }
 .tamplate-title h2 {
   font-size: 36px;
@@ -992,5 +1032,30 @@ label:hover::before {
   left: 50%;
   top: calc(100% - 2px);
   transform: translate(-50%, 0);
+}
+
+.section-bg::before {
+  content: "";
+  position: absolute;
+  left: 42px;
+  right: 42px;
+  top: 0;
+  height: 100%;
+  border-radius: 20px;
+  background: #363A4D;
+  z-index: -1;
+}
+
+.slide-card {
+  max-width: 360px;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.slide-card .card-title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 124.5%;
+  margin-bottom: 11px;
 }
 /*# sourceMappingURL=style.css.map */
