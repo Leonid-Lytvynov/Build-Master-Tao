@@ -139,7 +139,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .calculation .tamplate-title {
   margin-bottom: 59px;
-  text-align: left;
 }
 
 .calculation-form {
@@ -279,9 +278,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .delivery .tamplate-title::after {
   background-color: #89C249;
 }
-.delivery .delivery-nav {
-  top: calc(50% + 57px);
-}
 
 .delivery-card {
   padding: 0 20px 27px;
@@ -343,6 +339,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .service {
   position: relative;
   padding: 90px 50px 100px;
+  margin-bottom: 145px;
 }
 .service .tamplate-title {
   margin-bottom: 56px;
@@ -389,6 +386,32 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .service-card .transparent-btn {
   max-width: 153px;
   z-index: 1;
+}
+
+.about .tamplate-title {
+  padding-bottom: 13px;
+  margin-bottom: 44px;
+}
+.about .img-box {
+  padding: 0 8px;
+}
+.about .img-box img {
+  max-width: 550px;
+  max-height: 581px;
+  width: 45vw;
+}
+
+.about-description {
+  padding: 0 13px;
+}
+.about-description p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 170%;
+  margin-bottom: 24px;
+}
+.about-description p span {
+  font-weight: 400;
 }
 
 footer {
@@ -522,6 +545,16 @@ footer {
   .slide-card {
     margin: 0 15px;
   }
+  .about .tamplate-title {
+    text-align: left;
+  }
+  .about .tamplate-title::after {
+    background: #89C249;
+    left: 45px;
+  }
+  .about .img-box {
+    margin-top: -165px;
+  }
 }
 @media (min-width: 1200px) {
   .first-screen-slider .slick-slider {
@@ -530,6 +563,9 @@ footer {
   .first-screen-slider .container {
     padding-top: 165px;
     padding-bottom: 228px;
+  }
+  .calculation .tamplate-title {
+    text-align: left;
   }
   .calculation .tamplate-title h2::after {
     content: "";
@@ -541,17 +577,20 @@ footer {
   }
 }
 @media screen and (min-width: 1400px) {
-  .slider .slick-list {
+  .tamplate-slider .slick-list {
     margin: 0 -15px;
   }
 }
 @media screen and (max-width: 1399px) {
-  section .arrow-nav {
-    max-width: 960px;
-  }
-  .slider {
+  .tamplate-slider {
     max-width: 780px;
     margin: 0 auto;
+  }
+  .tamplate-slider .slick-arrow.slick-next {
+    right: -90px;
+  }
+  .tamplate-slider .slick-arrow.slick-prev {
+    left: -90px;
   }
 }
 @media screen and (max-width: 1199px) {
@@ -595,7 +634,6 @@ footer {
   .calculation .tamplate-title {
     margin: 0 auto 36px;
     padding-bottom: 26px;
-    text-align: center;
   }
   .calculation .tamplate-title h2 {
     max-width: 440px;
@@ -708,17 +746,15 @@ footer {
     margin-bottom: 32px;
     padding-bottom: 16px;
   }
-  .slider {
+  .tamplate-slider {
     max-width: 390px;
   }
-  .slider .slide-card {
+  body .slide-card {
     margin: 0 auto;
-  }
-  section .arrow-nav {
-    max-width: 570px;
   }
   .service {
     padding: 54px 0 100px;
+    margin-bottom: 54px;
   }
   .service .tamplate-title {
     margin-bottom: 36px;
@@ -730,6 +766,36 @@ footer {
   .service-card .service-description {
     margin-bottom: 7px;
     font-size: 14px;
+  }
+  .about .tamplate-title {
+    padding-bottom: 16px;
+    margin-bottom: 26px;
+  }
+  .about .tamplate-title::after {
+    background-color: #89C249;
+  }
+  .about .img-box {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .about .img-box img {
+    width: 74vw;
+    max-width: 350px;
+  }
+  .about-description {
+    padding: 0 17px;
+    margin-bottom: 18px;
+  }
+  .about-description p {
+    text-align: justify;
+    font-size: 16px;
+    line-height: 149.5%;
+    margin-bottom: 22px;
+  }
+  .about-description p span {
+    font-size: 16px;
+    line-height: 149.5%;
   }
 }
 @media screen and (max-width: 767px) {
@@ -762,10 +828,10 @@ footer {
   .delivery .slick-dots {
     bottom: -40px;
   }
-  .slider .slide-card {
+  body .slide-card {
     max-width: 335px;
   }
-  .slider .slide-card .card-title {
+  body .slide-card .card-title {
     margin-bottom: 10px;
   }
   .delivery-card {
@@ -928,8 +994,12 @@ body {
   transform: rotate(180deg);
 }
 
-.slick-arrow {
-  background-image: url(assets/img/icon-slick-arrow.svg);
+.slick-next {
+  background-image: url(assets/img/icon-slick-arrow-right.svg);
+}
+
+.slick-prev {
+  background-image: url(assets/img/icon-slick-arrow-left.svg);
 }
 
 .slick-prev:hover {
@@ -940,8 +1010,23 @@ body {
   background-image: url(assets/img/icon-slick-arrow-hover.svg);
 }
 
-.arrow-nav {
-  max-width: 1370px;
+.tamplate-slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  transform: translate(0, -50%);
+}
+.tamplate-slider .slick-prev {
+  left: -115px;
+}
+.tamplate-slider .slick-prev:hover {
+  transform: translate(0, -50%) rotate(0deg);
+}
+.tamplate-slider .slick-next {
+  right: -115px;
+}
+.tamplate-slider .slick-next:hover {
+  transform: translate(0, -50%) rotate(180deg);
 }
 
 label {
