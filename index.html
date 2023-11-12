@@ -116,12 +116,12 @@
     </main>
     <section id="calculation" class="calculation">
         <div class="container">
-            <div class="tamplate-title  col-lg-7">
+            <div class="tamplate-title col-lg-7">
                 <h2>Получить рассчет стоимости доставки вашего груза</h2>
             </div>
             <form action="#" class="calculation-form">
                 <div class="calculation-row">
-                    <div class="calculation-column">
+                    <div class="input-column">
                         <div class="input-box">
                             <label for="category">Категория товара:</label>
                             <input type="text" id="category" placeholder="Категория товара">
@@ -131,7 +131,7 @@
                             <input type="number" id="weight" placeholder="Введите вес">
                         </div>
                     </div>
-                    <div class="calculation-column">
+                    <div class="input-column">
                         <div class="input-box">
                             <label for="price">Стоимость груза:</label>
                             <input type="text" id="price" placeholder="Введите стоимость">
@@ -143,7 +143,7 @@
                     </div>
                 </div>
                 <div class="calculation-row">
-                    <div class="calculation-column">
+                    <div class="input-column">
                         <div class="input-box">
                             <input type="checkbox" id="insurance">
                             <label for="insurance">Страховка</label>
@@ -153,7 +153,7 @@
                             <label for="customs">Таможенное оформление</label>
                         </div>
                     </div>
-                    <div class="calculation-column">
+                    <div class="input-column">
                         <div class="input-box">
                             <label for="code">Код ТН ВЭД:</label>
                             <input type="number" id="code" placeholder="Введите код">
@@ -161,7 +161,7 @@
                     </div>
                 </div>
                 <div class="calculation-row">
-                    <div class="calculation-column">
+                    <div class="input-column">
                         <div class="file-name">
                             <p id="fileName">Ваше фото:</p>
                         </div>
@@ -185,7 +185,7 @@
     </section>
     <section class="advantages container-fluid section-bg">
         <div class="container">
-            <div class="tamplate-title col-lg-12">
+            <div class="tamplate-title title-primary col-lg-12">
                 <h2>Почему стоит выбрать именно нас?</h2>
             </div>
             <div id="advantages-slider" class="row">
@@ -259,7 +259,7 @@
     </section>
     <section class="delivery">
         <div class="container">
-            <div class="tamplate-title">
+            <div class="tamplate-title title-secondary">
                 <h2>Варианты доставки грузов из Китая</h2>
             </div>
             <div class="delivery-slider tamplate-slider">
@@ -393,7 +393,7 @@
     </section>
     <section class="service container-fluid section-bg">
         <div class="container">
-            <div class="tamplate-title">
+            <div class="tamplate-title title-primary">
                 <h2>Услуги</h2>
             </div>
             <div class="service-slider tamplate-slider">
@@ -438,7 +438,7 @@
     </section>
     <section class="about">
         <div class="container">
-            <div class="tamplate-title">
+            <div class="tamplate-title title-secondary">
                 <h2>О компании</h2>
             </div>
             <div class="row">
@@ -451,15 +451,131 @@
                     <p>Мы стремимся предоставить лучшие условия доставки и лучший сервис своим клиентам. Выбирая нас - вы
                         выбираете качественную доставку оптимальную по цене и времени! Убедитесь в этом сами!</p>
                 </div>
-                <div class="col-lg-6">
-                    <div class="img-box">
-                        <img src="assets/img/about-img.png" alt="decoration">
-                    </div>
+                <div class="col-lg-6 img-box">
+                    <img src="assets/img/about-img.png" alt="decoration">
                 </div>
             </div>
         </div>
     </section>
-
+    <section class="questions">
+        <div class="container">
+            <div class="tamplate-title title-primary">
+                <h2>Часто задаваемые вопросы</h2>
+            </div>
+            <div class="row">
+                <div class="questions-col-accordion">
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Как рассчитывается стоимость доставки?
+                     </button>
+                  </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p>Да, мы предоставляем такую услугу, мы можем взять оплату товара в Китае
+                                        на себя. Если у вас нет валютного счёта, то можете оплатить товар в гривнах на наш счет.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Какие документы и формальности требуются для доставки груза?
+                     </button>
+                  </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p>Да, мы предоставляем такую услугу, мы можем взять оплату товара в Китае
+                                        на себя. Если у вас нет валютного счёта, то можете оплатить товар в гривнах на наш счет.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Как происходит оплата за доставку груза?
+                     </button>
+                  </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p>Да, мы предоставляем такую услугу, мы можем взять оплату товара в Китае
+                                        на себя. Если у вас нет валютного счёта, то можете оплатить товар в гривнах на наш счет.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                        Можно ли через вас оплатить товар поставщику?
+                     </button>
+                  </h2>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p>Да, мы предоставляем такую услугу, мы можем взять оплату товара в Китае
+                                        на себя. Если у вас нет валютного счёта, то можете оплатить товар в гривнах на наш счет.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                        В чём особенность КАРГО доставки из Китая?
+                     </button>
+                  </h2>
+                            <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p>Да, мы предоставляем такую услугу, мы можем взять оплату товара в Китае
+                                        на себя. Если у вас нет валютного счёта, то можете оплатить товар в гривнах на наш счет.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                        Какой срок доставки из Китая?
+                     </button>
+                  </h2>
+                            <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p>Да, мы предоставляем такую услугу, мы можем взять оплату товара в Китае
+                                        на себя. Если у вас нет валютного счёта, то можете оплатить товар в гривнах на наш счет.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="questions-col-form">
+                    <form class="questions-form">
+                        <h3 class="questions-form__title">Остались вопросы?</h3>
+                        <p class="questions-form__description">Оставьте заявку и наш менеджер ответит вам в ближайшее время</p>
+                        <div class="input-column">
+                            <div class="input-box">
+                                <input type="text" placeholder="Имя *" name="name">
+                            </div>
+                            <div class="input-box">
+                                <input type="tel" placeholder="Телефон *" name="tel">
+                            </div>
+                            <div class="input-box">
+                                <input type="email" placeholder="E-mail" name="email">
+                            </div>
+                            <div class="input-box">
+                                <textarea name="yourQuestion" id="yourQuestion" placeholder="Ваш вопрос"></textarea>
+                            </div>
+                        </div>
+                        <a href="#" class="questions-btn btn btn-primary">Отправить запрос <img
+                     src="assets/img/icon-btn-arrow.svg" class="icon" alt="arrow"></a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer>
         Footer
     </footer>

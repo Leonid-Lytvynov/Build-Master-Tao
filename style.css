@@ -140,88 +140,37 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .calculation .tamplate-title {
   margin-bottom: 59px;
 }
-
-.calculation-form {
+.calculation .calculation-form {
   padding: 50px 35px;
-  background-color: #363A4D;
   width: 100%;
   max-width: 626px;
   border-radius: 20px;
 }
-
-.calculation-row {
+.calculation .calculation-form .calculation-btn {
+  padding: 20px 36px 20px 33px;
+  margin-left: 15px;
+  margin-bottom: 11px;
+}
+.calculation .calculation-row {
   display: flex;
 }
-
-.calculation-column {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-.calculation-column .input-box {
-  display: flex;
-  flex-direction: column;
-  margin: 0 15px 20px;
-}
-.calculation-column .input-box label {
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 126%;
-  margin-bottom: 6px;
-}
-.calculation-column .input-box input {
-  padding: 19px 20px;
-  font-size: 15px;
-  line-height: 126%;
-  border-radius: 10px;
-  background: #FFF;
-  transition: 0.3s;
-}
-.calculation-column .input-box input::placeholder {
-  color: #CBCBCB;
-}
-.calculation-column .input-box [for=fileInput] {
-  padding: 11px 20px;
-  font-weight: 400;
-  background-color: transparent;
-  border-radius: 10px;
-  border: 1px dashed rgba(255, 255, 255, 0.26);
-  text-align: center;
-  margin-bottom: 6px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.calculation-column .input-box [for=fileInput]:hover {
-  border: 1px dashed #89C249;
-  color: #89C249;
-}
-.calculation-column .input-box [type=file] {
-  display: none;
-}
-.calculation-column .has-checkbox {
+.calculation .input-column .has-checkbox {
   padding-top: 19px;
   margin-bottom: 8px;
 }
-.calculation-column .file-name p {
+.calculation .input-column .file-name p {
   padding: 0 15px;
   font-size: 15px;
   line-height: 126%;
   margin-top: 6px;
   margin-bottom: 14px;
 }
-
-.calculation-btn {
-  padding: 20px 36px 20px 33px;
-  margin-left: 15px;
-  margin-bottom: 11px;
-}
-
-.calculation-decoration {
+.calculation .calculation-decoration {
   position: absolute;
   bottom: -113px;
   right: 0;
 }
-.calculation-decoration img {
+.calculation .calculation-decoration img {
   max-width: 560px;
   max-height: 888px;
   width: 100%;
@@ -236,9 +185,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .advantages .tamplate-title {
   margin-bottom: 51px;
   padding-bottom: 13px;
-}
-.advantages .tamplate-title::after {
-  background-color: #E58D35;
 }
 
 .advantage {
@@ -274,9 +220,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .delivery .tamplate-title {
   padding-bottom: 13px;
   margin-bottom: 49px;
-}
-.delivery .tamplate-title::after {
-  background-color: #89C249;
 }
 
 .delivery-card {
@@ -345,9 +288,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
   margin-bottom: 56px;
   padding-bottom: 12px;
 }
-.service .tamplate-title::after {
-  background-color: #E58D35;
-}
 .service .service-nav {
   top: calc(50% + 55px);
 }
@@ -388,12 +328,15 @@ Use it to make something cool, have fun, and share what you've learned with othe
   z-index: 1;
 }
 
+.about {
+  margin-bottom: 52px;
+}
 .about .tamplate-title {
   padding-bottom: 13px;
   margin-bottom: 44px;
 }
 .about .img-box {
-  padding: 0 8px;
+  padding: 0 20px;
 }
 .about .img-box img {
   max-width: 550px;
@@ -412,6 +355,48 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .about-description p span {
   font-weight: 400;
+}
+
+.questions {
+  margin-bottom: 100px;
+}
+.questions .tamplate-title {
+  margin-bottom: 49px;
+  padding-bottom: 13px;
+}
+.questions .row {
+  gap: 10px;
+}
+.questions .questions-form {
+  max-width: 390px;
+  padding: 38px 40px;
+  border-radius: 20px;
+  box-shadow: 5px 15px 40px rgba(11, 24, 97, 0.32);
+}
+.questions .questions-form .questions-form__title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 126%;
+  margin-bottom: 7px;
+}
+.questions .questions-form .questions-form__description {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 126%;
+  margin-bottom: 22px;
+}
+.questions .questions-form .input-column {
+  margin-bottom: 10px;
+}
+.questions .questions-form .input-column .input-box {
+  margin: 0 0 14px;
+}
+.questions .questions-form .questions-btn {
+  padding: 20px 33px;
+  width: 100%;
+}
+.questions .questions-form .questions-btn img {
+  margin-left: auto;
 }
 
 footer {
@@ -549,11 +534,19 @@ footer {
     text-align: left;
   }
   .about .tamplate-title::after {
-    background: #89C249;
     left: 45px;
   }
   .about .img-box {
     margin-top: -165px;
+  }
+  .questions .row {
+    justify-content: center;
+  }
+  .questions .questions-col-accordion {
+    max-width: 545px;
+  }
+  .questions .questions-col-form {
+    max-width: 414px;
   }
 }
 @media (min-width: 1200px) {
@@ -574,6 +567,16 @@ footer {
     height: 2px;
     background-color: #89C249;
     margin: 10px 20px;
+  }
+  .questions .questions-col-accordion {
+    max-width: 740px;
+  }
+  .questions .questions-col-accordion .accordion-item {
+    width: 100%;
+  }
+  .questions .questions-form .questions-form__description {
+    max-width: 305px;
+    font-weight: 400;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -644,6 +647,9 @@ footer {
   }
   .calculation .calculation-decoration {
     max-width: 38vw;
+  }
+  .questions .questions-form {
+    text-align: center;
   }
 }
 @media screen and (max-width: 991px) {
@@ -726,11 +732,6 @@ footer {
   .calculation .calculation-decoration {
     display: none;
   }
-  body .section-bg::before {
-    left: 0;
-    right: 0;
-    border-radius: 0px;
-  }
   .advantages {
     padding: 55px 0 68px;
     margin-bottom: 53px;
@@ -749,9 +750,6 @@ footer {
   .tamplate-slider {
     max-width: 390px;
   }
-  body .slide-card {
-    margin: 0 auto;
-  }
   .service {
     padding: 54px 0 100px;
     margin-bottom: 54px;
@@ -767,6 +765,9 @@ footer {
     margin-bottom: 7px;
     font-size: 14px;
   }
+  .about {
+    margin-bottom: 45px;
+  }
   .about .tamplate-title {
     padding-bottom: 16px;
     margin-bottom: 26px;
@@ -775,7 +776,6 @@ footer {
     background-color: #89C249;
   }
   .about .img-box {
-    margin-top: 0;
     display: flex;
     justify-content: center;
   }
@@ -797,6 +797,51 @@ footer {
     font-size: 16px;
     line-height: 149.5%;
   }
+  .questions {
+    margin-bottom: 60px;
+  }
+  .questions .tamplate-title {
+    margin-bottom: 27px;
+    padding-bottom: 18px;
+  }
+  .questions .row {
+    gap: 14px;
+  }
+  .questions .questions-form {
+    margin: 0 auto;
+    padding: 38px 20px;
+  }
+  body .section-bg::before {
+    left: 0;
+    right: 0;
+    border-radius: 0px;
+  }
+  body .slide-card {
+    margin: 0 auto;
+  }
+  body .accordion-flush .accordion-item:first-child,
+  body .accordion-flush .accordion-item:last-child,
+  body .accordion-flush .accordion-item {
+    margin: 0 auto 14px;
+  }
+  body .accordion-flush .accordion-item:first-child .accordion-button,
+  body .accordion-flush .accordion-item:last-child .accordion-button,
+  body .accordion-flush .accordion-item .accordion-button {
+    min-height: 64px;
+    font-size: 16px;
+    padding: 11px 22px;
+  }
+  body .accordion-flush .accordion-item:first-child .accordion-body,
+  body .accordion-flush .accordion-item:last-child .accordion-body,
+  body .accordion-flush .accordion-item .accordion-body {
+    padding: 0 22px 11px;
+    line-height: 20.23px;
+  }
+  body .accordion-flush .accordion-item:first-child .accordion-body p,
+  body .accordion-flush .accordion-item:last-child .accordion-body p,
+  body .accordion-flush .accordion-item .accordion-body p {
+    font-size: 14px;
+  }
 }
 @media screen and (max-width: 767px) {
   .calculation .calculation-title {
@@ -807,7 +852,7 @@ footer {
     max-width: 335px;
   }
   .calculation .calculation-row {
-    flex-direction: column;
+    flex-wrap: wrap;
   }
   .calculation .calculation-row .calculation-column__margin {
     margin-bottom: -8px;
@@ -819,7 +864,10 @@ footer {
     margin-top: 0px;
     margin-bottom: 12px;
   }
-  .calculation .btn .icon {
+  .calculation .calculation-btn {
+    width: 100%;
+  }
+  .calculation .calculation-btn .icon {
     margin-left: auto;
   }
   .delivery .delivery-slider {
@@ -854,6 +902,11 @@ footer {
     padding: 13px 26px;
   }
 }
+@media screen and (max-width: 575px) {
+  .questions .questions-form {
+    max-width: 335px;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -876,6 +929,35 @@ body {
 .container-xxl {
   max-width: 1850px;
   position: relative;
+}
+
+.tamplate-title {
+  position: relative;
+  text-align: center;
+}
+.tamplate-title h2 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 124.5%;
+  text-transform: uppercase;
+}
+.tamplate-title::after {
+  content: "";
+  display: inline-block;
+  width: 85px;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  top: calc(100% - 2px);
+  transform: translate(-50%, 0);
+}
+
+.title-primary::after {
+  background-color: #E58D35;
+}
+
+.title-secondary::after {
+  background-color: #89C249;
 }
 
 .btn-primary {
@@ -1029,24 +1111,42 @@ body {
   transform: translate(0, -50%) rotate(180deg);
 }
 
+form {
+  background-color: #363A4D;
+}
+
 label {
   cursor: pointer;
 }
 
 input {
   border: none;
+  transition: 0.3s;
 }
 
 input:focus-visible {
   outline: none;
 }
 
-input:hover {
+textarea {
+  transition: 0.3s;
+  border: none;
+  resize: none;
+}
+
+textarea:focus-visible {
+  outline: none;
+}
+
+input:hover,
+textarea:hover {
   box-shadow: 0 0 4px 2px orange;
 }
 
 input:focus-visible,
-input:focus {
+input:focus,
+textarea:focus,
+textarea:focus-visible {
   box-shadow: 0 0 4px 2px #89C249;
 }
 
@@ -1098,25 +1198,58 @@ label:hover::before {
   border: 1px solid orange;
 }
 
-.tamplate-title {
-  position: relative;
+.input-column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.input-column .input-box {
+  display: flex;
+  flex-direction: column;
+  margin: 0 15px 20px;
+}
+.input-column .input-box label {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 126%;
+  margin-bottom: 6px;
+}
+.input-column .input-box input {
+  padding: 19px 20px;
+  font-size: 15px;
+  line-height: 126%;
+  border-radius: 10px;
+  background: #FFF;
+}
+.input-column .input-box input::placeholder {
+  color: #CBCBCB;
+}
+.input-column .input-box textarea {
+  font-size: 15px;
+  line-height: 126%;
+  padding: 16px 20px;
+  border-radius: 10px;
+}
+.input-column .input-box textarea::placeholder {
+  color: #CBCBCB;
+}
+.input-column .input-box [for=fileInput] {
+  padding: 11px 20px;
+  font-weight: 400;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px dashed rgba(255, 255, 255, 0.26);
   text-align: center;
+  margin-bottom: 6px;
+  cursor: pointer;
+  transition: 0.3s;
 }
-.tamplate-title h2 {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 124.5%;
-  text-transform: uppercase;
+.input-column .input-box [for=fileInput]:hover {
+  border: 1px dashed #89C249;
+  color: #89C249;
 }
-.tamplate-title::after {
-  content: "";
-  display: inline-block;
-  width: 85px;
-  height: 2px;
-  position: absolute;
-  left: 50%;
-  top: calc(100% - 2px);
-  transform: translate(-50%, 0);
+.input-column .input-box [type=file] {
+  display: none;
 }
 
 .section-bg::before {
@@ -1142,5 +1275,78 @@ label:hover::before {
   font-weight: 700;
   line-height: 124.5%;
   margin-bottom: 11px;
+}
+
+.accordion-flush .accordion-item:first-child,
+.accordion-flush .accordion-item:last-child,
+.accordion-flush .accordion-item {
+  margin-bottom: 17px;
+  border: 1px solid #3A444E;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: transparent;
+}
+.accordion-flush .accordion-item:first-child .accordion-button,
+.accordion-flush .accordion-item:last-child .accordion-button,
+.accordion-flush .accordion-item .accordion-button {
+  padding: 17px 34px;
+  padding-right: 18px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 124.5%;
+  background-color: transparent;
+}
+.accordion-flush .accordion-item:first-child .accordion-button:focus,
+.accordion-flush .accordion-item:last-child .accordion-button:focus,
+.accordion-flush .accordion-item .accordion-button:focus {
+  border: none;
+  outline: 0;
+  box-shadow: none;
+}
+.accordion-flush .accordion-item:first-child .accordion-button::after,
+.accordion-flush .accordion-item:last-child .accordion-button::after,
+.accordion-flush .accordion-item .accordion-button::after {
+  width: 27px;
+  height: 27px;
+  background-image: url(./assets/img/icon-accordion.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: 0.5s;
+}
+.accordion-flush .accordion-item:first-child .accordion-button:not(.collapsed),
+.accordion-flush .accordion-item:last-child .accordion-button:not(.collapsed),
+.accordion-flush .accordion-item .accordion-button:not(.collapsed) {
+  color: #282B38;
+  background-color: #fff;
+  border: none;
+  box-shadow: none;
+}
+.accordion-flush .accordion-item:first-child .accordion-button:not(.collapsed)::after,
+.accordion-flush .accordion-item:last-child .accordion-button:not(.collapsed)::after,
+.accordion-flush .accordion-item .accordion-button:not(.collapsed)::after {
+  background-image: url(./assets/img/icon-accordion-show.svg);
+  transform: rotate(360deg);
+}
+.accordion-flush .accordion-item:first-child .accordion-body,
+.accordion-flush .accordion-item:last-child .accordion-body,
+.accordion-flush .accordion-item .accordion-body {
+  color: #282B38;
+  background-color: #fff;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 144.5%;
+  padding: 0 34px 20px;
+  margin-top: -5px;
+}
+.accordion-flush .accordion-item:first-child .accordion-body p,
+.accordion-flush .accordion-item:last-child .accordion-body p,
+.accordion-flush .accordion-item .accordion-body p {
+  max-width: 583px;
+  margin-bottom: 0;
+}
+.accordion-flush .accordion-item:last-child {
+  margin-bottom: 0px;
 }
 /*# sourceMappingURL=style.css.map */
