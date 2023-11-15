@@ -137,8 +137,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .calculation {
   margin-bottom: 113px;
 }
-.calculation .tamplate-title {
-  margin-bottom: 59px;
+.calculation .template-title {
+  margin-bottom: 39px;
 }
 .calculation .calculation-form {
   padding: 50px 35px;
@@ -148,8 +148,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .calculation .calculation-form .calculation-btn {
   padding: 20px 36px 20px 33px;
-  margin-left: 15px;
-  margin-bottom: 11px;
+  margin: 0 15px 11px;
 }
 .calculation .calculation-row {
   display: flex;
@@ -178,18 +177,16 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .advantages {
-  margin-bottom: 97px;
-  padding: 90px 40px 63px;
+  margin-bottom: 111px;
   position: relative;
 }
-.advantages .tamplate-title {
-  margin-bottom: 51px;
-  padding-bottom: 13px;
+.advantages .template-title {
+  margin-bottom: 50px;
 }
 
 .advantage {
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 46px;
 }
 .advantage .image-box {
   width: 113px;
@@ -215,10 +212,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .delivery {
   position: relative;
-  margin-bottom: 101px;
+  margin-bottom: 99px;
 }
-.delivery .tamplate-title {
-  padding-bottom: 13px;
+.delivery .template-title {
   margin-bottom: 49px;
 }
 
@@ -284,9 +280,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
   padding: 90px 50px 100px;
   margin-bottom: 145px;
 }
-.service .tamplate-title {
+.service .template-title {
   margin-bottom: 56px;
-  padding-bottom: 12px;
 }
 .service .service-nav {
   top: calc(50% + 55px);
@@ -331,8 +326,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .about {
   margin-bottom: 52px;
 }
-.about .tamplate-title {
-  padding-bottom: 13px;
+.about .template-title {
   margin-bottom: 44px;
 }
 .about .img-box {
@@ -344,9 +338,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
   width: 45vw;
 }
 
-.about-description {
-  padding: 0 13px;
-}
 .about-description p {
   font-size: 18px;
   font-weight: 300;
@@ -360,9 +351,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .questions {
   margin-bottom: 100px;
 }
-.questions .tamplate-title {
+.questions .template-title {
   margin-bottom: 49px;
-  padding-bottom: 13px;
 }
 .questions .row {
   gap: 10px;
@@ -397,6 +387,60 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .questions .questions-form .questions-btn img {
   margin-left: auto;
+}
+
+.cooperation {
+  position: relative;
+}
+.cooperation .template-title {
+  margin-bottom: 87px;
+  padding-bottom: 17px;
+}
+.cooperation .template-title h2 {
+  margin-bottom: 6px;
+}
+.cooperation .row {
+  margin-bottom: 49px;
+}
+.cooperation .row:last-child {
+  margin-bottom: 0px;
+}
+.cooperation .row li:last-child {
+  margin-bottom: 0;
+}
+.cooperation .cooperation-list {
+  max-width: 528px;
+  padding: 0;
+  margin-bottom: 0px;
+}
+.cooperation .cooperation-list li {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 156.5%;
+  margin-bottom: 28px;
+  list-style-position: inside;
+}
+.cooperation .cooperation-list li::first-letter {
+  margin-left: -12px;
+}
+.cooperation .second-list {
+  max-width: 520px;
+  margin-bottom: 42px;
+}
+.cooperation .cooperation-btn {
+  padding: 20px 33px;
+  max-width: 243px;
+}
+.cooperation .cooperation-btn img {
+  margin: 0 -14px 0 45px;
+}
+.cooperation .img-box {
+  display: flex;
+  justify-content: center;
+}
+.cooperation .img-box img {
+  max-height: 406px;
+  object-position: center;
 }
 
 footer {
@@ -524,16 +568,24 @@ footer {
   }
 }
 @media (min-width: 992px) {
+  .accordion-flush .accordion-item:first-child .accordion-body,
+  .accordion-flush .accordion-item:last-child .accordion-body,
+  .accordion-flush .accordion-item .accordion-body {
+    margin-top: -5px;
+  }
   .first-screen-slider .slick-slider {
     padding: 0 92px;
+  }
+  .advantages .col-lg-3:nth-last-child(-n+4) .advantage {
+    margin-bottom: 0;
   }
   .slide-card {
     margin: 0 15px;
   }
-  .about .tamplate-title {
+  .about .template-title {
     text-align: left;
   }
-  .about .tamplate-title::after {
+  .about .template-title::after {
     left: 45px;
   }
   .about .img-box {
@@ -548,6 +600,16 @@ footer {
   .questions .questions-col-form {
     max-width: 414px;
   }
+  .about .about-description {
+    padding: 0 13px;
+  }
+  .cooperation .cooperation-list.second-list {
+    margin-top: 25px;
+    margin-left: 18px;
+  }
+  .cooperation .cooperation-btn {
+    margin-left: 19px;
+  }
 }
 @media (min-width: 1200px) {
   .first-screen-slider .slick-slider {
@@ -557,16 +619,19 @@ footer {
     padding-top: 165px;
     padding-bottom: 228px;
   }
-  .calculation .tamplate-title {
+  .calculation .template-title {
     text-align: left;
   }
-  .calculation .tamplate-title h2::after {
+  .calculation .template-title h2::after {
     content: "";
     display: inline-block;
     width: 85px;
     height: 2px;
     background-color: #89C249;
     margin: 10px 20px;
+  }
+  .calculation .template-title::after {
+    display: none;
   }
   .questions .questions-col-accordion {
     max-width: 740px;
@@ -580,19 +645,19 @@ footer {
   }
 }
 @media screen and (min-width: 1400px) {
-  .tamplate-slider .slick-list {
+  .template-slider .slick-list {
     margin: 0 -15px;
   }
 }
 @media screen and (max-width: 1399px) {
-  .tamplate-slider {
+  .template-slider {
     max-width: 780px;
     margin: 0 auto;
   }
-  .tamplate-slider .slick-arrow.slick-next {
+  .template-slider .slick-arrow.slick-next {
     right: -90px;
   }
-  .tamplate-slider .slick-arrow.slick-prev {
+  .template-slider .slick-arrow.slick-prev {
     left: -90px;
   }
 }
@@ -634,15 +699,15 @@ footer {
   .first-screen-slider .slick-dots {
     bottom: 43px;
   }
-  .calculation .tamplate-title {
+  .calculation .template-title {
     margin: 0 auto 36px;
     padding-bottom: 26px;
   }
-  .calculation .tamplate-title h2 {
+  .calculation .template-title h2 {
     max-width: 440px;
     margin: 0 auto;
   }
-  .calculation .tamplate-title::after {
+  .calculation .template-title::after {
     background-color: #89C249;
   }
   .calculation .calculation-decoration {
@@ -653,6 +718,10 @@ footer {
   }
 }
 @media screen and (max-width: 991px) {
+  section .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   header .navbar {
     padding-top: 18px;
     padding-bottom: 0;
@@ -701,6 +770,40 @@ footer {
     font-size: 16px;
     margin-bottom: 60px;
   }
+  body section.container-fluid {
+    padding: 55px 0px 60px;
+  }
+  body section.container-fluid::before {
+    left: 0;
+    right: 0;
+    border-radius: 0px;
+  }
+  body section .slide-card {
+    margin: 0 auto;
+  }
+  body section .accordion-flush .accordion-item:first-child,
+  body section .accordion-flush .accordion-item:last-child,
+  body section .accordion-flush .accordion-item {
+    margin: 0 auto 14px;
+  }
+  body section .accordion-flush .accordion-item:first-child .accordion-button,
+  body section .accordion-flush .accordion-item:last-child .accordion-button,
+  body section .accordion-flush .accordion-item .accordion-button {
+    min-height: 64px;
+    font-size: 16px;
+    padding: 11px 22px;
+  }
+  body section .accordion-flush .accordion-item:first-child .accordion-body,
+  body section .accordion-flush .accordion-item:last-child .accordion-body,
+  body section .accordion-flush .accordion-item .accordion-body {
+    padding: 0 22px 11px;
+    line-height: 20.23px;
+  }
+  body section .accordion-flush .accordion-item:first-child .accordion-body p,
+  body section .accordion-flush .accordion-item:last-child .accordion-body p,
+  body section .accordion-flush .accordion-item .accordion-body p {
+    font-size: 14px;
+  }
   .first-screen-slider .slick-slider {
     height: calc(100vh - 72px);
   }
@@ -714,16 +817,23 @@ footer {
     font-size: 16px;
     max-width: 275px;
   }
-  .container .tamplate-title h2 {
+  section .template-title {
+    padding-bottom: 16px;
+  }
+  section .template-title h2 {
     font-size: 24px;
+  }
+  section .template-title h4 {
+    font-size: 16px;
   }
   .calculation {
     margin-bottom: 60px;
   }
-  .calculation .tamplate-title {
+  .calculation .template-title {
     margin-bottom: 55px;
+    padding-bottom: 25px;
   }
-  .calculation .tamplate-title h2 {
+  .calculation .template-title h2 {
     max-width: 390px;
   }
   .calculation .calculation-form {
@@ -734,45 +844,42 @@ footer {
   }
   .advantages {
     padding: 55px 0 68px;
-    margin-bottom: 53px;
+    margin-bottom: 54px;
   }
-  .advantages .tamplate-title {
+  .advantages .template-title {
     margin-bottom: 46px;
-    padding-bottom: 16px;
+    padding-bottom: 18px;
   }
-  .advantages .slick-dots {
-    bottom: -8px;
+  .advantages .advantage {
+    margin-bottom: 54px;
   }
-  .delivery .tamplate-title {
+  .delivery .template-title {
     margin-bottom: 32px;
-    padding-bottom: 16px;
   }
-  .tamplate-slider {
+  .template-slider {
     max-width: 390px;
   }
   .service {
     padding: 54px 0 100px;
     margin-bottom: 54px;
   }
-  .service .tamplate-title {
-    margin-bottom: 36px;
-    padding-bottom: 16px;
+  .service .slick-track {
+    margin-bottom: 41px;
   }
-  .service .slick-dots {
-    bottom: -41px;
+  .service .template-title {
+    margin-bottom: 36px;
   }
   .service-card .service-description {
-    margin-bottom: 7px;
+    margin-bottom: 5px;
     font-size: 14px;
   }
   .about {
     margin-bottom: 45px;
   }
-  .about .tamplate-title {
-    padding-bottom: 16px;
+  .about .template-title {
     margin-bottom: 26px;
   }
-  .about .tamplate-title::after {
+  .about .template-title::after {
     background-color: #89C249;
   }
   .about .img-box {
@@ -784,7 +891,6 @@ footer {
     max-width: 350px;
   }
   .about-description {
-    padding: 0 17px;
     margin-bottom: 18px;
   }
   .about-description p {
@@ -798,11 +904,11 @@ footer {
     line-height: 149.5%;
   }
   .questions {
-    margin-bottom: 60px;
+    margin-bottom: 58px;
   }
-  .questions .tamplate-title {
+  .questions .template-title {
     margin-bottom: 27px;
-    padding-bottom: 18px;
+    padding-bottom: 19px;
   }
   .questions .row {
     gap: 14px;
@@ -811,36 +917,51 @@ footer {
     margin: 0 auto;
     padding: 38px 20px;
   }
-  body .section-bg::before {
-    left: 0;
-    right: 0;
-    border-radius: 0px;
+  .cooperation {
+    text-align: justify;
   }
-  body .slide-card {
+  .cooperation .row {
+    margin-bottom: 42px;
+  }
+  .cooperation .template-title {
+    margin-bottom: 43px;
+    padding-bottom: 19px;
+  }
+  .cooperation .cooperation-list {
     margin: 0 auto;
   }
-  body .accordion-flush .accordion-item:first-child,
-  body .accordion-flush .accordion-item:last-child,
-  body .accordion-flush .accordion-item {
-    margin: 0 auto 14px;
-  }
-  body .accordion-flush .accordion-item:first-child .accordion-button,
-  body .accordion-flush .accordion-item:last-child .accordion-button,
-  body .accordion-flush .accordion-item .accordion-button {
-    min-height: 64px;
+  .cooperation .cooperation-list li {
     font-size: 16px;
-    padding: 11px 22px;
+    font-weight: 400;
+    line-height: 149.5%;
+    margin-bottom: 22px;
   }
-  body .accordion-flush .accordion-item:first-child .accordion-body,
-  body .accordion-flush .accordion-item:last-child .accordion-body,
-  body .accordion-flush .accordion-item .accordion-body {
-    padding: 0 22px 11px;
-    line-height: 20.23px;
+  .cooperation .img-box {
+    margin-bottom: 38px;
   }
-  body .accordion-flush .accordion-item:first-child .accordion-body p,
-  body .accordion-flush .accordion-item:last-child .accordion-body p,
-  body .accordion-flush .accordion-item .accordion-body p {
-    font-size: 14px;
+  .cooperation .img-box img {
+    width: 350px;
+    max-height: 220px;
+  }
+  .cooperation .second-row .cooperation-list {
+    margin-bottom: 28px;
+  }
+  .cooperation .second-row .cooperation-list li {
+    margin-bottom: 24px;
+  }
+  .cooperation .second-row .cooperation-list li::first-letter {
+    margin-left: -15px;
+  }
+  .cooperation .second-row .img-box {
+    margin-bottom: 29px;
+  }
+  .cooperation .cooperation-btn {
+    display: flex;
+    margin: 0 auto;
+    max-width: 335px;
+  }
+  .cooperation .cooperation-btn img {
+    margin-left: auto;
   }
 }
 @media screen and (max-width: 767px) {
@@ -901,6 +1022,9 @@ footer {
   .delivery-card .card-btn-row .transparent-btn {
     padding: 13px 26px;
   }
+  .questions .row {
+    gap: 9px;
+  }
 }
 @media screen and (max-width: 575px) {
   .questions .questions-form {
@@ -931,17 +1055,43 @@ body {
   position: relative;
 }
 
-.tamplate-title {
+section:last-of-type {
+  margin-bottom: 56px;
+}
+section:nth-child(even) .template-title::after {
+  background-color: #E58D35;
+}
+section.container-fluid {
+  padding: 90px 85px 100px;
+}
+section.container-fluid::before {
+  content: "";
+  position: absolute;
+  left: 42px;
+  right: 42px;
+  top: 0;
+  height: 100%;
+  border-radius: 20px;
+  background: #363A4D;
+  z-index: -1;
+}
+
+.template-title {
   position: relative;
   text-align: center;
+  padding-bottom: 13px;
 }
-.tamplate-title h2 {
+.template-title h2 {
   font-size: 36px;
   font-weight: 700;
   line-height: 124.5%;
   text-transform: uppercase;
 }
-.tamplate-title::after {
+.template-title h4 {
+  font-size: 24px;
+  line-height: 124.5%;
+}
+.template-title::after {
   content: "";
   display: inline-block;
   width: 85px;
@@ -950,13 +1100,6 @@ body {
   left: 50%;
   top: calc(100% - 2px);
   transform: translate(-50%, 0);
-}
-
-.title-primary::after {
-  background-color: #E58D35;
-}
-
-.title-secondary::after {
   background-color: #89C249;
 }
 
@@ -1022,6 +1165,7 @@ body {
   align-items: center;
   position: absolute;
   left: 50%;
+  bottom: 0;
   transform: translate(-50%, 0);
 }
 .slick-dots li {
@@ -1092,22 +1236,22 @@ body {
   background-image: url(assets/img/icon-slick-arrow-hover.svg);
 }
 
-.tamplate-slider .slick-arrow {
+.template-slider .slick-arrow {
   position: absolute;
   top: 50%;
   z-index: 5;
   transform: translate(0, -50%);
 }
-.tamplate-slider .slick-prev {
+.template-slider .slick-prev {
   left: -115px;
 }
-.tamplate-slider .slick-prev:hover {
+.template-slider .slick-prev:hover {
   transform: translate(0, -50%) rotate(0deg);
 }
-.tamplate-slider .slick-next {
+.template-slider .slick-next {
   right: -115px;
 }
-.tamplate-slider .slick-next:hover {
+.template-slider .slick-next:hover {
   transform: translate(0, -50%) rotate(180deg);
 }
 
@@ -1252,18 +1396,6 @@ label:hover::before {
   display: none;
 }
 
-.section-bg::before {
-  content: "";
-  position: absolute;
-  left: 42px;
-  right: 42px;
-  top: 0;
-  height: 100%;
-  border-radius: 20px;
-  background: #363A4D;
-  z-index: -1;
-}
-
 .slide-card {
   max-width: 360px;
   width: 100%;
@@ -1338,7 +1470,6 @@ label:hover::before {
   font-weight: 300;
   line-height: 144.5%;
   padding: 0 34px 20px;
-  margin-top: -5px;
 }
 .accordion-flush .accordion-item:first-child .accordion-body p,
 .accordion-flush .accordion-item:last-child .accordion-body p,
